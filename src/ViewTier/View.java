@@ -1,23 +1,40 @@
 package ViewTier;
 
+import java.awt.CardLayout;
+
 import javax.swing.*;
 import LogicTier.LogicInterface;
 
 public class View
 {
 	private LogicInterface _logicInterface;
+	
+	//SWING
 	private int _width, _height;
 	private JFrame _jframe;
 	
 	public View(LogicInterface logicInterface, int width, int height)
 	{
+		//3-Tier setting
 		setLogicInterface(logicInterface);
+		
+		//JFrame instantiation
 		setJframe(new JFrame());
+		JButton
+			leftButton = new JButton("<"),
+			rightButton = new JButton(">");
+		JPanel meanButtons = new JPanel();
+		meanButtons.add(leftButton);
+		meanButtons.add(rightButton);
+		getJframe().add(meanButtons);
 		
 		//JFrame settings
 		setHeight(height);
 		setWidth(width);
 		getJframe().setSize(getWidth(), getHeight());
+		
+		//JFrame ready
+		getJframe().setLayout(new CardLayout(5, 5));
 		getJframe().setVisible(true);
 	}
 
