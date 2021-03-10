@@ -20,7 +20,7 @@ public class MainClass
 		
 		LogicInterface logic = new Logic(localDataBase, webScrappers);
 		
-		View window = new View(logic);
+		View window = new View(logic, 800, 500);
 		
 		
 	}
