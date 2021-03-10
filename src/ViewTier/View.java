@@ -17,6 +17,7 @@ public class View
 		//JFrame settings
 		setHeight(height);
 		setWidth(width);
+		getJframe().setSize(getWidth(), getHeight());
 		getJframe().setVisible(true);
 	}
 
