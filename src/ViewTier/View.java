@@ -20,13 +20,17 @@ public class View
 		
 		//JFrame instantiation
 		setJframe(new JFrame());
+		
+		//JButtons instantiation
 		JButton
 			leftButton = new JButton("<"),
 			rightButton = new JButton(">");
-		JPanel meanButtons = new JPanel();
-		meanButtons.add(leftButton);
-		meanButtons.add(rightButton);
-		getJframe().add(meanButtons);
+		JPanel buttonsPanel = new JPanel();
+		buttonsPanel.add(leftButton);
+		buttonsPanel.add(rightButton);
+		
+		//JButtons added to JFrame
+		getJframe().add(buttonsPanel);
 		
 		//JFrame settings
 		setHeight(height);
