@@ -1,5 +1,7 @@
 package DataTier;
 
+import java.util.ArrayList;
+
 import EntitiesPackage.Ressource;
 
 public class LocalDataBase implements DataInterface
@@ -11,8 +13,8 @@ public class LocalDataBase implements DataInterface
 	}
 
 	@Override
-	public int getFetchSize()
+	public ArrayList<Ressource> getRessouces()
 	{
-		return 0;
+		return null;
 	}
 }

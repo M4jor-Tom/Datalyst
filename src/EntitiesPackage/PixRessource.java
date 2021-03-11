@@ -2,9 +2,12 @@ package EntitiesPackage;
 
 public class PixRessource extends PreReferencedRessource
 {
-	public PixRessource(int localId, Ressource predecessor, String url)
+	private int _page;
+	
+	public PixRessource(int localId, String url, int page)
 	{
-		super(localId, predecessor, url);
+		super(localId, url);
+		setPage(page);
 	}
 
 	@Override

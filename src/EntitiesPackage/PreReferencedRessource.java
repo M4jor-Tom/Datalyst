@@ -4,9 +4,9 @@ abstract public class PreReferencedRessource extends Ressource
 {
 	private int _foreignId;
 	
-	public PreReferencedRessource(int localId, Ressource predecessor, String url)
+	public PreReferencedRessource(int localId, String url)
 	{
-		super(localId, predecessor, url);
+		super(localId, url);
 		setForeignIdFromUrl();
 	}
 

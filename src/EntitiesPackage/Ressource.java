@@ -5,14 +5,12 @@ import DataTier.DataInterface;
 abstract public class Ressource
 {
 	private int _localId;
-	private Ressource _predecessor;
 	private String _url;
 	private DataInterface[] _webLocations;
 	
-	public Ressource(int localId, Ressource predecessor, String url)
+	public Ressource(int localId, String url)
 	{
 		setlocalId(localId);
-		setPredecessor(predecessor);
 		setUrl(url);
 	}
 
@@ -24,16 +22,6 @@ abstract public class Ressource
 	public void setlocalId(int localId)
 	{
 		_localId = localId;
-	}
-	
-	public Ressource getPredecessor()
-	{
-		return _predecessor;
-	}
-
-	public void setPredecessor(Ressource predecessor)
-	{
-		_predecessor = predecessor;
 	}
 
 	public String getUrl()
