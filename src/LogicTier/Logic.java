@@ -98,7 +98,7 @@ public class Logic implements LogicInterface
 	}
 
 	@Override
-	public BufferedImage getImage()
+	public BufferedImage getBufferedImage()
 	{
 		return _bufferedImage;
 	}

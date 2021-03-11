@@ -27,7 +27,7 @@ public class View
 		JFrame jFrame = new JFrame();
 		
 		//Image instantiation
-		JLabel imageLabel = new JLabel(new ImageIcon(getLogicInterface().getImage()));
+		JLabel imageLabel = new JLabel(new ImageIcon(getLogicInterface().getBufferedImage()));
 		
 		//JButtons instantiation
 		JButton

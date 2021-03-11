@@ -7,5 +7,5 @@ public interface LogicInterface
 	public void setUpCurrent();
 	public void setDownCurrent();
 	
-	public BufferedImage getImage();
+	public BufferedImage getBufferedImage();
 }
