@@ -32,7 +32,8 @@ public class LocalDirectory implements DataInterface
 		ArrayList<Resource> resourcesList = new ArrayList<>();
 		
 		for(final File file: files)
-			resourcesList.add(new LocalResource(0, file));
+			if(!file.isDirectory())
+				resourcesList.add(new LocalResource(0, file));
 		
 		return resourcesList;
 	}
