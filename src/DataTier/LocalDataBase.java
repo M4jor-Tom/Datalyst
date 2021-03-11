@@ -1,7 +1,9 @@
 package DataTier;
 
+import java.io.File;
 import java.util.ArrayList;
 
+import EntitiesPackage.ImageResource;
 import EntitiesPackage.Resource;
 
 public class LocalDataBase implements DataInterface
@@ -26,6 +28,9 @@ public class LocalDataBase implements DataInterface
 	@Override
 	public ArrayList<Resource> getResouces()
 	{
-		return null;
+		ArrayList<Resource> resourcesList = new ArrayList<>();
+		//TEST
+		resourcesList.add(new ImageResource(0, null, new File(getLocalPath() + "imgres.jpg")));
+		return resourcesList;
 	}
 }
