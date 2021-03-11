@@ -1,8 +1,10 @@
 package ViewTier;
 
 import java.awt.CardLayout;
+import java.awt.image.BufferedImage;
 
 import javax.swing.*;
+
 import LogicTier.LogicInterface;
 
 public class View
@@ -20,6 +22,13 @@ public class View
 		
 		//JFrame instantiation
 		setJframe(new JFrame());
+		
+		//ImagePanel instantiation
+		BufferedImage image;
+		
+		image = getLogicInterface().getImage();
+		JLabel imageLabel = new JLabel(new ImageIcon(image));
+		getJframe().add(imageLabel);
 		
 		//JButtons instantiation
 		JButton

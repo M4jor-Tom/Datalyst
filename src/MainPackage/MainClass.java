@@ -1,8 +1,5 @@
 package MainPackage;
 
-//Program's classes
-import EntitiesPackage.*;
-
 //3-Tier
 import DataTier.*;
 import LogicTier.*;
