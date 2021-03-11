@@ -36,6 +36,8 @@ public class View
 			rightButton = new JButton(">");
 		
 		//JButton decoration
+		leftButton.setFocusPainted(false);
+		rightButton.setFocusPainted(false);
 		leftButton.setBackground(new Color(0, 0, 0));
 		rightButton.setBackground(new Color(0, 0, 0));
 		leftButton.setForeground(new Color(255, 255, 255));
