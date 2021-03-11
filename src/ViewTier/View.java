@@ -1,6 +1,8 @@
 package ViewTier;
 
 import java.awt.CardLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -12,6 +14,7 @@ public class View
 	
 	//SWING
 	private int _width, _height;
+	private JLabel _imageLabel;
 	
 	public View(LogicInterface logicInterface, int width, int height)
 	{
@@ -27,7 +30,7 @@ public class View
 		JFrame jFrame = new JFrame();
 		
 		//Image instantiation
-		JLabel imageLabel = new JLabel(new ImageIcon(getLogicInterface().getBufferedImage()));
+		setImageLabel(new JLabel(getLogicInterface().getImageIcon()));
 		
 		//JButtons instantiation
 		JButton
@@ -37,8 +40,32 @@ public class View
 		buttonsPanel.add(leftButton);
 		buttonsPanel.add(rightButton);
 		
+		//JButtons listeners
+		leftButton.addActionListener(
+			new ActionListener()
+			{
+				@Override
+				public void actionPerformed(ActionEvent e)
+				{
+					getLogicInterface().setDownCurrent();
+					getImageLabel().setIcon(getLogicInterface().getImageIcon());
+				}
+			}
+		);
+		rightButton.addActionListener(
+			new ActionListener()
+			{
+				@Override
+				public void actionPerformed(ActionEvent e)
+				{
+					getLogicInterface().setUpCurrent();
+					getImageLabel().setIcon(getLogicInterface().getImageIcon());
+				}
+			}
+		);
+		
 		//Adding Label and Panel to JFrame
-		jFrame.add(imageLabel);
+		jFrame.add(getImageLabel());
 		jFrame.add(buttonsPanel);
 		
 		//JFrame settings
@@ -77,5 +104,15 @@ public class View
 	public void setHeight(int height)
 	{
 		_height = height;
+	}
+
+	public JLabel getImageLabel()
+	{
+		return _imageLabel;
+	}
+
+	public void setImageLabel(JLabel imageLabel)
+	{
+		_imageLabel = imageLabel;
 	}
 }

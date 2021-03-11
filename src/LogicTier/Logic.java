@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import DataTier.DataInterface;
 import EntitiesPackage.Resource;
@@ -97,10 +98,15 @@ public class Logic implements LogicInterface
 		return getResources().get(getCurrent());
 	}
 
-	@Override
 	public BufferedImage getBufferedImage()
 	{
 		return _bufferedImage;
+	}
+	
+	@Override
+	public ImageIcon getImageIcon()
+	{
+		return new ImageIcon(getBufferedImage());
 	}
 
 	public void updateBuffererdImage()
