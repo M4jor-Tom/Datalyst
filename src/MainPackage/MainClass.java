@@ -12,14 +12,16 @@ public class MainClass
 {
 	public static void main(String[] args)
 	{
-		DataInterface localDataBase = new LocalDataBase();
-		DataInterface[] webScrappers = new DataInterface[1];//[2];
+		//DATA-TIER
+		DataInterface localDataBase = new LocalDataBase("D:\\gDrive\\DCIM\\Images");
+		DataInterface[] webScrappers = new DataInterface[2];
 		webScrappers[0] = new PixScrapper();
-		//[TODO]
-		//webScrappers[1] = new DevScrapper();
+		webScrappers[1] = new DevScrapper();
 		
+		//LOGIC-TIER
 		LogicInterface logic = new Logic(localDataBase, webScrappers);
 		
+		//VIEW-TIER
 		View window = new View(logic, 800, 500);
 	}
 }
