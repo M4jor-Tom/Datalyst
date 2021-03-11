@@ -5,14 +5,14 @@ import java.net.URL;
 
 import DataTier.DataInterface;
 
-abstract public class Ressource
+abstract public class Resource
 {
 	private int _localId;
 	private URL _url;
 	private File _file;
 	private DataInterface[] _webLocations;
 	
-	public Ressource(int localId, URL url, File file)
+	public Resource(int localId, URL url, File file)
 	{
 		setlocalId(localId);
 		setUrl(url);

@@ -3,9 +3,9 @@ package EntitiesPackage;
 import java.io.File;
 import java.net.URL;
 
-public class DevRessource extends ImageRessource
+public class DevResource extends ImageResource
 {
-	public DevRessource(int localId, URL url, File file)
+	public DevResource(int localId, URL url, File file)
 	{
 		super(localId, url, file);
 	}

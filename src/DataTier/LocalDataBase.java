@@ -2,7 +2,7 @@ package DataTier;
 
 import java.util.ArrayList;
 
-import EntitiesPackage.Ressource;
+import EntitiesPackage.Resource;
 
 public class LocalDataBase implements DataInterface
 {
@@ -24,7 +24,7 @@ public class LocalDataBase implements DataInterface
 	}
 
 	@Override
-	public ArrayList<Ressource> getRessouces()
+	public ArrayList<Resource> getResouces()
 	{
 		return null;
 	}

@@ -2,12 +2,12 @@ package DataTier;
 
 import java.util.ArrayList;
 
-import EntitiesPackage.Ressource;
+import EntitiesPackage.Resource;
 
 public class PixScrapper implements DataInterface
 {
 	@Override
-	public ArrayList<Ressource> getRessouces()
+	public ArrayList<Resource> getResouces()
 	{
 		return null;
 	}

@@ -2,9 +2,9 @@ package DataTier;
 
 import java.util.ArrayList;
 
-import EntitiesPackage.Ressource;
+import EntitiesPackage.Resource;
 
 public interface DataInterface
 {	
-	public ArrayList<Ressource> getRessouces();
+	public ArrayList<Resource> getResouces();
 }

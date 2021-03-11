@@ -3,11 +3,11 @@ package EntitiesPackage;
 import java.io.File;
 import java.net.URL;
 
-public class PixRessource extends ImageRessource
+public class PixResource extends ImageResource
 {
 	private int _page;
 	
-	public PixRessource(int localId, URL url, int page, File file)
+	public PixResource(int localId, URL url, int page, File file)
 	{
 		super(localId, url, file);
 		setPage(page);

@@ -2,13 +2,13 @@ package DataTier;
 
 import java.util.ArrayList;
 
-import EntitiesPackage.Ressource;
+import EntitiesPackage.Resource;
 
 public class DevScrapper implements DataInterface
 {
 
 	@Override
-	public ArrayList<Ressource> getRessouces()
+	public ArrayList<Resource> getResouces()
 	{
 		// TODO Auto-generated method stub
 		return null;
