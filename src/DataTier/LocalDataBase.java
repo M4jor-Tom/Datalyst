@@ -3,7 +3,7 @@ package DataTier;
 import java.io.File;
 import java.util.ArrayList;
 
-import EntitiesPackage.ImageResource;
+import EntitiesPackage.LocalResource;
 import EntitiesPackage.Resource;
 
 public class LocalDataBase implements DataInterface
