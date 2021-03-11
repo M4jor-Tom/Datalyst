@@ -72,7 +72,8 @@ public class View
 		jFrame.setSize(getWidth(), getHeight());
 		
 		//JFrame ready
-		jFrame.setLayout(new CardLayout(5, 5));
+		jFrame.setLayout(new CardLayout());
+		jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		jFrame.setVisible(true);
 	}
 
