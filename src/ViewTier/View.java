@@ -23,13 +23,11 @@ public class View
 	
 	public void run()
 	{
-
 		//JFrame instantiation
 		JFrame jFrame = new JFrame();
 		
 		//Image instantiation
 		JLabel imageLabel = new JLabel(new ImageIcon(getLogicInterface().getImage()));
-		jFrame.add(imageLabel);
 		
 		//JButtons instantiation
 		JButton
@@ -39,7 +37,8 @@ public class View
 		buttonsPanel.add(leftButton);
 		buttonsPanel.add(rightButton);
 		
-		//JButtons added to JFrame
+		//Adding Label and Panel to JFrame
+		jFrame.add(imageLabel);
 		jFrame.add(buttonsPanel);
 		
 		//JFrame settings
