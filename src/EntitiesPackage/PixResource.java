@@ -3,7 +3,7 @@ package EntitiesPackage;
 import java.io.File;
 import java.net.URL;
 
-public class PixResource extends ImageResource
+public class PixResource extends ImageResource implements PreReferenced
 {
 	private int _page;
 	
