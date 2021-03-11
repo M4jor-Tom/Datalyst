@@ -9,10 +9,4 @@ public class DevResource extends ImageResource
 	{
 		super(localId, url, file);
 	}
-
-	@Override
-	public void setForeignIdFromUrl()
-	{
-		setForeignId(0);
-	}
 }
