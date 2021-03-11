@@ -13,6 +13,16 @@ public class PixResource extends ImageResource implements PreReferenced
 		setPage(page);
 	}
 
+	public int getPage()
+	{
+		return _page;
+	}
+
+	public void setPage(int page)
+	{
+		_page = page;
+	}
+
 	@Override
 	public void setForeignIdFromUrl()
 	{
