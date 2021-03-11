@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
+import dataTier.DataInterface;
 import entitiesPackage.Resource;
 import mediaTier.MediaInterface;
 
@@ -20,7 +21,7 @@ public class Logic implements LogicInterface
 	ArrayList<Resource> _resources;
 	BufferedImage _bufferedImage;
 	
-	public Logic(MediaInterface localMediaInterface, MediaInterface[] webMediaInterfaces)
+	public Logic(MediaInterface localMediaInterface, MediaInterface[] webMediaInterfaces, DataInterface sqlManager)
 	{
 		setLocalMediaInterface(localMediaInterface);
 		setWebMediaInterfaces(webMediaInterfaces);
