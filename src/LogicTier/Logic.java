@@ -60,7 +60,7 @@ public class Logic implements LogicInterface
 	@Override
 	public void setUpCurrent()
 	{
-		if(getCurrent() < getResourcesCount())
+		if(getCurrent() < getResourcesCount() - 1)
 		{
 			setCurrent(getCurrent() + 1);
 			updateBuffererdImage();
