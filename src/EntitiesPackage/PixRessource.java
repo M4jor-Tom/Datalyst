@@ -15,4 +15,14 @@ public class PixRessource extends PreReferencedRessource
 	{
 		setForeignId(0);
 	}
+
+	public int getPage()
+	{
+		return _page;
+	}
+
+	public void setPage(int page)
+	{
+		_page = page;
+	}
 }
