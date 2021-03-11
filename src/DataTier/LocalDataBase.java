@@ -10,7 +10,7 @@ public class LocalDataBase implements DataInterface
 	
 	public LocalDataBase(String localPath)
 	{
-		setLocalPath(_localPath);
+		setLocalPath(localPath);
 	}
 	
 	public String getLocalPath()
