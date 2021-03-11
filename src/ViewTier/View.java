@@ -1,6 +1,8 @@
 package viewTier;
 
+import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -36,9 +38,12 @@ public class View
 		JButton
 			leftButton = new JButton("<"),
 			rightButton = new JButton(">");
-		JPanel buttonsPanel = new JPanel();
-		buttonsPanel.add(leftButton);
-		buttonsPanel.add(rightButton);
+		
+		//JButton decoration
+		leftButton.setBackground(new Color(0, 0, 0));
+		rightButton.setBackground(new Color(0, 0, 0));
+		leftButton.setForeground(new Color(255, 255, 255));
+		rightButton.setForeground(new Color(255, 255, 255));
 		
 		//JButtons listeners
 		leftButton.addActionListener(
@@ -65,14 +70,15 @@ public class View
 		);
 		
 		//Adding Label and Panel to JFrame
-		jFrame.add(getImageLabel());
-		jFrame.add(buttonsPanel);
+		jFrame.setLayout(new BorderLayout());
+		jFrame.getContentPane().add(getImageLabel(), BorderLayout.CENTER);
+		jFrame.getContentPane().add(leftButton, BorderLayout.LINE_START);
+		jFrame.getContentPane().add(rightButton, BorderLayout.LINE_END);
 		
 		//JFrame settings
 		jFrame.setSize(getWidth(), getHeight());
 		
 		//JFrame ready
-		jFrame.setLayout(new CardLayout());
 		jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		jFrame.setVisible(true);
 	}
