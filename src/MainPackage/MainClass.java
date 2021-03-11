@@ -20,5 +20,6 @@ public class MainClass
 		
 		//VIEW-TIER
 		View window = new View(logic, 800, 500);
+		window.run();
 	}
 }

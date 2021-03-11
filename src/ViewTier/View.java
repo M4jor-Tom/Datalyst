@@ -1,7 +1,6 @@
 package ViewTier;
 
 import java.awt.CardLayout;
-import java.awt.image.BufferedImage;
 
 import javax.swing.*;
 
@@ -13,19 +12,24 @@ public class View
 	
 	//SWING
 	private int _width, _height;
-	private JFrame _jframe;
 	
 	public View(LogicInterface logicInterface, int width, int height)
 	{
 		//3-Tier setting
 		setLogicInterface(logicInterface);
-		
+		setHeight(height);
+		setWidth(width);
+	}
+	
+	public void run()
+	{
+
 		//JFrame instantiation
-		setJframe(new JFrame());
+		JFrame jFrame = new JFrame();
 		
 		//Image instantiation
 		JLabel imageLabel = new JLabel(new ImageIcon(getLogicInterface().getImage()));
-		getJframe().add(imageLabel);
+		jFrame.add(imageLabel);
 		
 		//JButtons instantiation
 		JButton
@@ -36,16 +40,14 @@ public class View
 		buttonsPanel.add(rightButton);
 		
 		//JButtons added to JFrame
-		getJframe().add(buttonsPanel);
+		jFrame.add(buttonsPanel);
 		
 		//JFrame settings
-		setHeight(height);
-		setWidth(width);
-		getJframe().setSize(getWidth(), getHeight());
+		jFrame.setSize(getWidth(), getHeight());
 		
 		//JFrame ready
-		getJframe().setLayout(new CardLayout(5, 5));
-		getJframe().setVisible(true);
+		jFrame.setLayout(new CardLayout(5, 5));
+		jFrame.setVisible(true);
 	}
 
 	public LogicInterface getLogicInterface()
@@ -76,15 +78,5 @@ public class View
 	public void setHeight(int height)
 	{
 		_height = height;
-	}
-
-	public JFrame getJframe()
-	{
-		return _jframe;
-	}
-
-	public void setJframe(JFrame jframe)
-	{
-		_jframe = jframe;
 	}
 }
