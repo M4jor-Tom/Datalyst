@@ -98,12 +98,12 @@ public class Logic implements LogicInterface
 		return getResources().get(getCurrent());
 	}
 
+	@Override
 	public BufferedImage getBufferedImage()
 	{
 		return _bufferedImage;
 	}
 	
-	@Override
 	public ImageIcon getImageIcon()
 	{
 		return new ImageIcon(getBufferedImage());

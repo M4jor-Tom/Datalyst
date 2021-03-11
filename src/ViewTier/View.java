@@ -14,7 +14,7 @@ public class View
 	private LogicInterface _logicInterface;
 	
 	//SWING
-	private JLabel _imageLabel;
+	private ImagePanel _imagePanel;
 	
 	public View(LogicInterface logicInterface)
 	{
@@ -28,7 +28,7 @@ public class View
 		JFrame jFrame = new JFrame();
 		
 		//Image instantiation
-		setImageLabel(new JLabel(getLogicInterface().getImageIcon()));
+		setImagePanel(new ImagePanel(getLogicInterface().getBufferedImage()));
 		
 		//JButtons instantiation
 		JButton
@@ -49,7 +49,7 @@ public class View
 				public void actionPerformed(ActionEvent e)
 				{
 					getLogicInterface().setDownCurrent();
-					getImageLabel().setIcon(getLogicInterface().getImageIcon());
+					getImagePanel().actualize(getLogicInterface().getBufferedImage());
 				}
 			}
 		);
@@ -60,14 +60,14 @@ public class View
 				public void actionPerformed(ActionEvent e)
 				{
 					getLogicInterface().setUpCurrent();
-					getImageLabel().setIcon(getLogicInterface().getImageIcon());
+					getImagePanel().actualize(getLogicInterface().getBufferedImage());
 				}
 			}
 		);
 		
 		//Adding Label and Panel to JFrame
 		jFrame.setLayout(new BorderLayout());
-		jFrame.getContentPane().add(getImageLabel(), BorderLayout.CENTER);
+		jFrame.getContentPane().add(getImagePanel(), BorderLayout.CENTER);//getImageLabel(), BorderLayout.CENTER);
 		jFrame.getContentPane().add(leftButton, BorderLayout.LINE_START);
 		jFrame.getContentPane().add(rightButton, BorderLayout.LINE_END);
 		
@@ -88,13 +88,13 @@ public class View
 		_logicInterface = logicInterface;
 	}
 
-	public JLabel getImageLabel()
+	public ImagePanel getImagePanel()
 	{
-		return _imageLabel;
+		return _imagePanel;
 	}
 
-	public void setImageLabel(JLabel imageLabel)
+	public void setImagePanel(ImagePanel imagePanel)
 	{
-		_imageLabel = imageLabel;
+		_imagePanel = imagePanel;
 	}
 }
