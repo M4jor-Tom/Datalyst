@@ -8,7 +8,7 @@ public class MainClass
 {
 	public static void main(String[] args)
 	{
-		//DATA-TIER
+		//MEDIA-TIER
 		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
 		MediaInterface[] webScrappers = new MediaInterface[2];
 		webScrappers[0] = new PixScrapper();
