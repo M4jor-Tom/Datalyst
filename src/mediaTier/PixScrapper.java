@@ -1,10 +1,10 @@
-package DataTier;
+package mediaTier;
 
 import java.util.ArrayList;
 
-import EntitiesPackage.Resource;
+import entitiesPackage.Resource;
 
-public class PixScrapper implements DataInterface
+public class PixScrapper implements MediaInterface
 {
 	@Override
 	public ArrayList<Resource> getResouces()

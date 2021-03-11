@@ -1,12 +1,12 @@
-package DataTier;
+package mediaTier;
 
 import java.io.File;
 import java.util.ArrayList;
 
-import EntitiesPackage.LocalResource;
-import EntitiesPackage.Resource;
+import entitiesPackage.LocalResource;
+import entitiesPackage.Resource;
 
-public class LocalDirectory implements DataInterface
+public class LocalDirectory implements MediaInterface
 {
 	private String _localPath;
 	

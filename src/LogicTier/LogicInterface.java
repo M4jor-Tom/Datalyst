@@ -1,6 +1,4 @@
-package LogicTier;
-
-import java.awt.image.BufferedImage;
+package logicTier;
 
 import javax.swing.ImageIcon;
 

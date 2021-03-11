@@ -1,17 +1,16 @@
-package MainPackage;
+package mainPackage;
 
-//3-Tier
-import DataTier.*;
-import LogicTier.*;
-import ViewTier.*;
+import logicTier.*;
+import mediaTier.*;
+import viewTier.*;
 
 public class MainClass
 {
 	public static void main(String[] args)
 	{
 		//DATA-TIER
-		DataInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
-		DataInterface[] webScrappers = new DataInterface[2];
+		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
+		MediaInterface[] webScrappers = new MediaInterface[2];
 		webScrappers[0] = new PixScrapper();
 		webScrappers[1] = new DevScrapper();
 		

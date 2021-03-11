@@ -1,4 +1,4 @@
-package EntitiesPackage;
+package entitiesPackage;
 
 import java.io.File;
 

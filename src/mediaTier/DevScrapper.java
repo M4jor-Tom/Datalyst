@@ -1,10 +1,10 @@
-package DataTier;
+package mediaTier;
 
 import java.util.ArrayList;
 
-import EntitiesPackage.Resource;
+import entitiesPackage.Resource;
 
-public class DevScrapper implements DataInterface
+public class DevScrapper implements MediaInterface
 {
 
 	@Override

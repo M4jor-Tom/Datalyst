@@ -1,4 +1,4 @@
-package LogicTier;
+package logicTier;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -9,42 +9,42 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
-import DataTier.DataInterface;
-import EntitiesPackage.Resource;
+import entitiesPackage.Resource;
+import mediaTier.MediaInterface;
 
 public class Logic implements LogicInterface
 {
-	DataInterface _localDataInterface;
-	DataInterface[] _webDataInterfaces;
+	MediaInterface _localMediaInterface;
+	MediaInterface[] _webMediaInterfaces;
 	int _current;
 	ArrayList<Resource> _resources;
 	BufferedImage _bufferedImage;
 	
-	public Logic(DataInterface localDataInterface, DataInterface[] webDataInterfaces)
+	public Logic(MediaInterface localMediaInterface, MediaInterface[] webMediaInterfaces)
 	{
-		setLocalDataInterface(localDataInterface);
-		setWebDataInterfaces(webDataInterfaces);
+		setLocalMediaInterface(localMediaInterface);
+		setWebMediaInterfaces(webMediaInterfaces);
 
 		setCurrent(0);
-		setResources(getLocalDataInterface().getResouces());
+		setResources(getLocalMediaInterface().getResouces());
 		updateBuffererdImage();
 	}
 	
-	public DataInterface getLocalDataInterface()
+	public MediaInterface getLocalMediaInterface()
 	{
-		return _localDataInterface;
+		return _localMediaInterface;
 	}
 	
-	public void setLocalDataInterface(DataInterface localDataInterface)
+	public void setLocalMediaInterface(MediaInterface localMediaInterface)
 	{
-		_localDataInterface = localDataInterface;
+		_localMediaInterface = localMediaInterface;
 	}
 	
-	public void setWebDataInterfaces(DataInterface[] webDataInterfaces)
+	public void setWebMediaInterfaces(MediaInterface[] webMediaInterfaces)
 	{
-		_webDataInterfaces = new DataInterface[webDataInterfaces.length];
-		for(int i = 0; i < webDataInterfaces.length; i++)
-			_webDataInterfaces[i] = webDataInterfaces[i];
+		_webMediaInterfaces = new MediaInterface[webMediaInterfaces.length];
+		for(int i = 0; i < webMediaInterfaces.length; i++)
+			_webMediaInterfaces[i] = webMediaInterfaces[i];
 	}
 	
 	public int getCurrent()
@@ -79,7 +79,7 @@ public class Logic implements LogicInterface
 	
 	public ArrayList<Resource> getResources()
 	{
-		return getLocalDataInterface().getResouces();
+		return getLocalMediaInterface().getResouces();
 	}
 	
 	public void setResources(ArrayList<Resource> ressources)
@@ -112,7 +112,7 @@ public class Logic implements LogicInterface
 	public void updateBuffererdImage()
 	{
 		//Getting current Resource
-		Resource currentRessource = getLocalDataInterface().getResouces().get(getCurrent());
+		Resource currentRessource = getLocalMediaInterface().getResouces().get(getCurrent());
 		
 		File file = null;
 		URL url = null;

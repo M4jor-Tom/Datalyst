@@ -1,4 +1,4 @@
-package EntitiesPackage;
+package entitiesPackage;
 
 public interface PreReferenced
 {

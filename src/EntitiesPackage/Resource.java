@@ -1,16 +1,16 @@
-package EntitiesPackage;
+package entitiesPackage;
 
 import java.io.File;
 import java.net.URL;
 
-import DataTier.DataInterface;
+import mediaTier.MediaInterface;
 
 abstract public class Resource
 {
 	private int _localId;
 	private URL _url;
 	private File _file;
-	private DataInterface[] _webLocations;
+	private MediaInterface[] _webLocations;
 	
 	public Resource(int localId, URL url, File file)
 	{
@@ -49,12 +49,12 @@ abstract public class Resource
 		_file = file;
 	}
 
-	public DataInterface[] getWebLocations()
+	public MediaInterface[] getWebLocations()
 	{
 		return _webLocations;
 	}
 
-	public void setWebLocations(DataInterface[] webLocations)
+	public void setWebLocations(MediaInterface[] webLocations)
 	{
 		_webLocations = webLocations;
 	}
