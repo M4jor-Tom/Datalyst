@@ -1,17 +1,22 @@
 package EntitiesPackage;
 
+import java.io.File;
+import java.net.URL;
+
 import DataTier.DataInterface;
 
 abstract public class Ressource
 {
 	private int _localId;
-	private String _url;
+	private URL _url;
+	private File _file;
 	private DataInterface[] _webLocations;
 	
-	public Ressource(int localId, String url)
+	public Ressource(int localId, URL url, File file)
 	{
 		setlocalId(localId);
 		setUrl(url);
+		setFile(file);
 	}
 
 	public int getlocalId()
@@ -24,14 +29,24 @@ abstract public class Ressource
 		_localId = localId;
 	}
 
-	public String getUrl()
+	public URL getUrl()
 	{
 		return _url;
 	}
 	
-	public void setUrl(String url)
+	public void setUrl(URL url)
 	{
 		_url = url;
+	}
+
+	public File getFile()
+	{
+		return _file;
+	}
+
+	public void setFile(File file)
+	{
+		_file = file;
 	}
 
 	public DataInterface[] getWebLocations()

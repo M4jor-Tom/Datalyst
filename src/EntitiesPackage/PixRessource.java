@@ -1,12 +1,15 @@
 package EntitiesPackage;
 
+import java.io.File;
+import java.net.URL;
+
 public class PixRessource extends PreReferencedRessource
 {
 	private int _page;
 	
-	public PixRessource(int localId, String url, int page)
+	public PixRessource(int localId, URL url, int page, File file)
 	{
-		super(localId, url);
+		super(localId, url, file);
 		setPage(page);
 	}
 

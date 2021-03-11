@@ -1,12 +1,15 @@
 package EntitiesPackage;
 
+import java.io.File;
+import java.net.URL;
+
 abstract public class PreReferencedRessource extends Ressource
 {
 	private int _foreignId;
 	
-	public PreReferencedRessource(int localId, String url)
+	public PreReferencedRessource(int localId, URL url, File file)
 	{
-		super(localId, url);
+		super(localId, url, file);
 		setForeignIdFromUrl();
 	}
 
