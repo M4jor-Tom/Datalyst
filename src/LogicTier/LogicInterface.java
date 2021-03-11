@@ -1,10 +1,11 @@
 package LogicTier;
 
-import java.util.ArrayList;
-
-import EntitiesPackage.Ressource;
+import java.awt.image.BufferedImage;
 
 public interface LogicInterface
 {
-	public ArrayList<Ressource> getRessources();
+	public void setUpCurrent();
+	public void setDownCurrent();
+	
+	public BufferedImage getImage();
 }
