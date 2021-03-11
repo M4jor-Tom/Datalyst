@@ -1,7 +1,6 @@
 package viewTier;
 
 import java.awt.BorderLayout;
-import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,15 +14,12 @@ public class View
 	private LogicInterface _logicInterface;
 	
 	//SWING
-	private int _width, _height;
 	private JLabel _imageLabel;
 	
-	public View(LogicInterface logicInterface, int width, int height)
+	public View(LogicInterface logicInterface)
 	{
 		//3-Tier setting
 		setLogicInterface(logicInterface);
-		setHeight(height);
-		setWidth(width);
 	}
 	
 	public void run()
@@ -76,10 +72,9 @@ public class View
 		jFrame.getContentPane().add(rightButton, BorderLayout.LINE_END);
 		
 		//JFrame settings
-		jFrame.setSize(getWidth(), getHeight());
+		jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		
 		//JFrame ready
-		jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		jFrame.setVisible(true);
 	}
 
@@ -91,26 +86,6 @@ public class View
 	public void setLogicInterface(LogicInterface logicInterface)
 	{
 		_logicInterface = logicInterface;
-	}
-
-	public int getWidth()
-	{
-		return _width;
-	}
-
-	public void setWidth(int width)
-	{
-		_width = width;
-	}
-
-	public int getHeight()
-	{
-		return _height;
-	}
-
-	public void setHeight(int height)
-	{
-		_height = height;
 	}
 
 	public JLabel getImageLabel()

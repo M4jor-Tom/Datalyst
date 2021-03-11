@@ -18,7 +18,7 @@ public class MainClass
 		LogicInterface logic = new Logic(testImagesBase, webScrappers);
 		
 		//VIEW-TIER
-		View window = new View(logic, 800, 500);
+		View window = new View(logic);
 		window.run();
 	}
 }
