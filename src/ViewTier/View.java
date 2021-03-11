@@ -23,11 +23,8 @@ public class View
 		//JFrame instantiation
 		setJframe(new JFrame());
 		
-		//ImagePanel instantiation
-		BufferedImage image;
-		
-		image = getLogicInterface().getImage();
-		JLabel imageLabel = new JLabel(new ImageIcon(image));
+		//Image instantiation
+		JLabel imageLabel = new JLabel(new ImageIcon(getLogicInterface().getImage()));
 		getJframe().add(imageLabel);
 		
 		//JButtons instantiation
