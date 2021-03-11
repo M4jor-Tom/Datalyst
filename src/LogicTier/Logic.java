@@ -26,6 +26,7 @@ public class Logic implements LogicInterface
 
 		setCurrent(0);
 		setResources(getLocalDataInterface().getResouces());
+		updateBuffererdImage();
 	}
 	
 	public DataInterface getLocalDataInterface()
