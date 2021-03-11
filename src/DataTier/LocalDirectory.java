@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import EntitiesPackage.LocalResource;
 import EntitiesPackage.Resource;
 
-public class LocalDataBase implements DataInterface
+public class LocalDirectory implements DataInterface
 {
 	private String _localPath;
 	
-	public LocalDataBase(String localPath)
+	public LocalDirectory(String localPath)
 	{
 		setLocalPath(localPath);
 	}

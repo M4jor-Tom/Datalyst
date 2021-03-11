@@ -10,7 +10,7 @@ public class MainClass
 	public static void main(String[] args)
 	{
 		//DATA-TIER
-		DataInterface testImagesBase = new LocalDataBase("D:\\gDrive\\DCIM\\Images\\");
+		DataInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
 		DataInterface[] webScrappers = new DataInterface[2];
 		webScrappers[0] = new PixScrapper();
 		webScrappers[1] = new DevScrapper();
