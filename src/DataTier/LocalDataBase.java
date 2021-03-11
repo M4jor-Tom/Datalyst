@@ -28,9 +28,12 @@ public class LocalDataBase implements DataInterface
 	@Override
 	public ArrayList<Resource> getResouces()
 	{
+		File[] files = new File(getLocalPath()).listFiles();
 		ArrayList<Resource> resourcesList = new ArrayList<>();
-		//TEST
-		resourcesList.add(new ImageResource(0, null, new File(getLocalPath() + "imgres.jpg")));
+		
+		for(final File file: files)
+			resourcesList.add(new LocalResource(0, file));
+		
 		return resourcesList;
 	}
 }
