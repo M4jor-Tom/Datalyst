@@ -6,10 +6,21 @@ import EntitiesPackage.Ressource;
 
 public class LocalDataBase implements DataInterface
 {
-	@Override
-	public Ressource[] getRessouces()
+	private String _localPath;
+	
+	public LocalDataBase(String localPath)
 	{
-		return null;
+		setLocalPath(_localPath);
+	}
+	
+	public String getLocalPath()
+	{
+		return _localPath;
+	}
+
+	public void setLocalPath(String localPath)
+	{
+		_localPath = localPath;
 	}
 
 	@Override
