@@ -4,8 +4,13 @@ import java.util.ArrayList;
 
 import entitiesPackage.Resource;
 
-public class PixScrapper implements MediaInterface
+public class PixScraper extends WebScraper implements MediaInterface
 {
+	public PixScraper()
+	{
+		super();
+	}
+	
 	@Override
 	public ArrayList<Resource> getResouces()
 	{

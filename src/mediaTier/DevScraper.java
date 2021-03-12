@@ -4,8 +4,12 @@ import java.util.ArrayList;
 
 import entitiesPackage.Resource;
 
-public class DevScrapper implements MediaInterface
+public class DevScraper extends WebScraper implements MediaInterface
 {
+	public DevScraper()
+	{
+		super();
+	}
 
 	@Override
 	public ArrayList<Resource> getResouces()
