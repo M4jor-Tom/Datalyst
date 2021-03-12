@@ -75,6 +75,7 @@ public class View
 		
 		//JFrame settings
 		jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		
 		//JFrame ready
 		jFrame.setVisible(true);
