@@ -1,3 +1,6 @@
 [submodule "modules/pixiv-scrapper"]
 	path = modules/pixiv-scrapper
 	url = https://github.com/Kent-Lee/pixiv-scraper
+[submodule "modules/deviantart-scraper"]
+	path = modules/deviantart-scraper
+	url = https://github.com/Kent-Lee/deviantart-scraper
