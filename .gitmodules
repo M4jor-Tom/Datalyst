@@ -1,0 +1,3 @@
+[submodule "modules/pixiv-scrapper"]
+	path = modules/pixiv-scrapper
+	url = https://github.com/Kent-Lee/pixiv-scraper
