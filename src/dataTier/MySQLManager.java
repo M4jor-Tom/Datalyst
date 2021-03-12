@@ -1,34 +1,56 @@
 package dataTier;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class MySQLManager implements DataInterface
 {
+	private Connection _connection;
+	
 	public MySQLManager()
 	{
-		
+		connect();
 	}
 	
-	public Connection connect()
+	public void connect()
 	{
-		Connection connection = null;
-		
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/datalyst",
-				"root",
-				""
+			setConnection(
+				DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/datalyst",
+					"root",
+					""
+				)
 			);
 		}
 		catch(SQLException | ClassNotFoundException e)
 		{
 			e.printStackTrace();
 		}
-		
-		return connection;
+	}
+	
+	public ResultSet query(String stringQuery)
+	{
+		try
+		{
+			Statement statement = getConnection().createStatement();
+			return statement.executeQuery(stringQuery);
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public Connection getConnection()
+	{
+		return _connection;
+	}
+
+	public void setConnection(Connection connection)
+	{
+		_connection = connection;
 	}
 }
