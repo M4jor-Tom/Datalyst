@@ -1,10 +1,12 @@
 package mediaTier;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+
 import entitiesPackage.Resource;
 
 public abstract class WebScraper implements MediaInterface
@@ -26,7 +28,21 @@ public abstract class WebScraper implements MediaInterface
 	{
 		
 	}
-	
+
+	public Document getDocument(String stringUrl)
+	{
+		try
+		{
+			return Jsoup.connect(stringUrl)
+				.cookies(getCookies())
+				.get();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
 	public String getTokenSelector()
 	{
 		return "input[name='" + getTokenName() + "']";
