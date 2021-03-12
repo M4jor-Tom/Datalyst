@@ -10,16 +10,16 @@ public class MainClass
 	public static void main(String[] args)
 	{
 		//DATA-TIER
-		DataInterface mysqlManager = new MySQLManager();
+		DataInterface mysqlManager = null;//new MySQLManager();
 		
 		//MEDIA-TIER
 		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
-		MediaInterface[] webScrappers = new MediaInterface[2];
-		webScrappers[0] = new PixScrapper();
-		webScrappers[1] = new DevScrapper();
+		MediaInterface[] webScrapers = new MediaInterface[2];
+		webScrapers[0] = null;//new PixScraper("uid", "pwd");
+		webScrapers[1] = new DevScraper("uid", "pwd");
 		
 		//LOGIC-TIER
-		LogicInterface logic = new Logic(testImagesBase, webScrappers, mysqlManager);
+		LogicInterface logic = new Logic(testImagesBase, webScrapers, mysqlManager);
 		
 		//VIEW-TIER
 		View window = new View(logic);

@@ -78,7 +78,7 @@ public class View
 		jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		
 		//JFrame ready
-		jFrame.setVisible(true);
+		//jFrame.setVisible(true);
 	}
 
 	public LogicInterface getLogicInterface()
