@@ -2,13 +2,13 @@ package mediaTier;
 
 
 
-public abstract class WebScrapper implements MediaInterface
+public abstract class WebScraper implements MediaInterface
 {
 	public String _loginUrl;
 	public String _tokenName;
 	final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36";
 	
-	public WebScrapper(String loginUrl, String tokenName, String userName, String password)
+	public WebScraper(String loginUrl, String tokenName, String userName, String password)
 	{
 		setLoginUrl(loginUrl);
 		setTokenName(tokenName);

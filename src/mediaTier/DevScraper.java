@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import entitiesPackage.Resource;
 
-public class DevScrapper implements MediaInterface
+public class DevScraper extends WebScraper implements MediaInterface
 {
 
 	@Override
