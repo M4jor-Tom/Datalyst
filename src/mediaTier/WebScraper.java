@@ -1,6 +1,7 @@
 package mediaTier;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import entitiesPackage.Resource;
 
 public abstract class WebScraper implements MediaInterface
 {
+	private ArrayList<Resource> _resources;
 	public String _loginUrl;
 	public String _tokenName;
 	private Map<String, String> _cookies;
@@ -18,11 +20,14 @@ public abstract class WebScraper implements MediaInterface
 	
 	public WebScraper(String loginUrl, String tokenName, String userName, String password)
 	{
+		setResources(null);
 		setCookies(null);
 		setLoginUrl(loginUrl);
 		setTokenName(tokenName);
 		login(userName, password);
 	}
+
+	public abstract void actualizeResources();
 	
 	public void login(String username, String password)
 	{
@@ -43,6 +48,18 @@ public abstract class WebScraper implements MediaInterface
 		}
 		return null;
 	}
+
+	public ArrayList<Resource> getResources()
+	{
+		actualizeResources();
+		return _resources;
+	}
+	
+	public void setResources(ArrayList<Resource> resources)
+	{
+		_resources = resources;
+	}
+	
 	public String getTokenSelector()
 	{
 		return "input[name='" + getTokenName() + "']";
