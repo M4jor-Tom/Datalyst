@@ -61,10 +61,10 @@ public class Logic implements LogicInterface
 	}
 
 	
-	private MediaInterface[] getWebMediaInterfaces()
+	/*private MediaInterface[] getWebMediaInterfaces()
 	{
 		return _webMediaInterfaces;
-	}
+	}*/
 	
 	public int getCurrent()
 	{
