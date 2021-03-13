@@ -20,10 +20,15 @@ public abstract class WebScraper implements MediaInterface
 	
 	public WebScraper(String loginUrl, String tokenName, String userName, String password)
 	{
+		//Initialization of Resources and Cookies to null
 		setResources(null);
 		setCookies(null);
+		
+		//Setting data
 		setLoginUrl(loginUrl);
 		setTokenName(tokenName);
+		
+		//Begin process of scraping
 		login(userName, password);
 	}
 
