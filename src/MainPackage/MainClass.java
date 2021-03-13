@@ -15,8 +15,8 @@ public class MainClass
 		//MEDIA-TIER
 		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
 		MediaInterface[] webScrapers = new MediaInterface[2];
-		webScrapers[0] = null;//new PixScraper("uid", "pwd");
-		webScrapers[1] = new DevScraper("uid", "pwd");
+		webScrapers[0] = null;//new PixScraper("[uid]", "[pwd]");
+		webScrapers[1] = null;//new DevScraper("[uid]", "[pwd]");
 		
 		//LOGIC-TIER
 		LogicInterface logic = new Logic(testImagesBase, webScrapers, mysqlManager);
