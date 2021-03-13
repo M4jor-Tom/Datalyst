@@ -1,9 +1,13 @@
 package mediaTier;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import entitiesPackage.LocalImageResource;
+import entitiesPackage.LocalVideoResource;
 import entitiesPackage.Resource;
 
 public class LocalDirectory implements MediaInterface
@@ -32,7 +36,19 @@ public class LocalDirectory implements MediaInterface
 		
 		for(final File file: files)
 			if(!file.isDirectory())
-				resourcesList.add(new LocalImageResource(0, file));
+			{
+				try
+				{
+					if(Files.probeContentType(Paths.get(file.getPath())).contains("image"))
+						resourcesList.add(new LocalImageResource(0, file));
+					else if(Files.probeContentType(Paths.get(file.getPath())).contains("video"))
+						resourcesList.add(new LocalVideoResource(0, file));
+				}
+				catch(IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
 		
 		return resourcesList;
 	}

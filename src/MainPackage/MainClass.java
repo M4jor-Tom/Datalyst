@@ -14,7 +14,7 @@ public class MainClass
 		
 		//MEDIA-TIER
 		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
-		MediaInterface testVideoBase = new LocalDirectory("D:\\gDrive\\DCIM\\Vidéos\\");
+		//MediaInterface testVideoBase = new LocalDirectory("D:\\gDrive\\DCIM\\Vidéos\\");
 		MediaInterface[] webScrapers = new MediaInterface[2];
 		webScrapers[0] = null;//new PixScraper("[uid]", "[pwd]");
 		webScrapers[1] = null;//new DevScraper("[uid]", "[pwd]");
