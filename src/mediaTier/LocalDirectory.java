@@ -3,7 +3,7 @@ package mediaTier;
 import java.io.File;
 import java.util.ArrayList;
 
-import entitiesPackage.LocalResource;
+import entitiesPackage.LocalImageResource;
 import entitiesPackage.Resource;
 
 public class LocalDirectory implements MediaInterface
@@ -32,7 +32,7 @@ public class LocalDirectory implements MediaInterface
 		
 		for(final File file: files)
 			if(!file.isDirectory())
-				resourcesList.add(new LocalResource(0, file));
+				resourcesList.add(new LocalImageResource(0, file));
 		
 		return resourcesList;
 	}
