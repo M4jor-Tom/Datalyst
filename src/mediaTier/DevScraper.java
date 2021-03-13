@@ -79,6 +79,34 @@ public class DevScraper extends WebScraper implements MediaInterface
 		{	
 			System.out.println("Finding images...");
 			
+			/*HashMap<String, String> lazyLoadData = new HashMap<>();
+			lazyLoadData.put("version", "eclipse%3Bmajor");
+			lazyLoadData.put("platform", "desktop");
+			lazyLoadData.put("url", "https%3A%2F%2Fwww.deviantart.com%2Fsnoiot%2Ffavourites");
+			lazyLoadData.put("referer", "https%3A%2F%2Fwww.deviantart.com%2F");
+			lazyLoadData.put("client_id", "7e54069e-13c1-92a0-731d-087b77b7dc38");
+			lazyLoadData.put("uuid", "99a57314: 986-413b-a034-ed6466646c54");
+			lazyLoadData.put("requestid", "623mc08fb284af062b0bfdc4186c154a340d");
+			lazyLoadData.put("view", "profile");
+			lazyLoadData.put("component", "favourites");
+			lazyLoadData.put("_brandId", "wix");
+			lazyLoadData.put("_ms", "32102");
+			lazyLoadData.put("evid", "98");
+			lazyLoadData.put("itemid", "69332372");
+			lazyLoadData.put("typeid", "21");
+			lazyLoadData.put("offset", "50");
+			lazyLoadData.put("_lv", "2.0.875");
+			lazyLoadData.put("_", new Timestamp(System.currentTimeMillis() / 1000).toString());
+			
+			Connection.Response lazyLoader = Jsoup.connect("https://frog.wix.com/da-client")
+				.cookies(getCookies())
+				.data(lazyLoadData)
+				.method(Connection.Method.POST)
+				.userAgent(USER_AGENT)
+				.execute();
+			
+			//setCookies(lazyLoader.cookies());*/
+
 			//Get bookmarks list
 			Elements bookmarks = getDocument("https://www.deviantart.com/snoiot/favourites")
 				.getElementsByTag("a");
