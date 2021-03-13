@@ -8,9 +8,9 @@ public class PixResource extends ImageResource implements PreReferenced
 	private int _pixId;
 	private int _page;
 	
-	public PixResource(int localId, URL url, int page, File file)
+	public PixResource(int localId, URL url, int page, String name)
 	{
-		super(localId, url, file);
+		super(localId, url, null, name);
 		setPage(page);
 		setForeignIdFromUrl();
 	}

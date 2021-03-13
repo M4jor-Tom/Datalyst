@@ -11,12 +11,15 @@ abstract public class Resource
 	private URL _url;
 	private File _file;
 	private MediaInterface[] _webLocations;
+	private String _name;
+	final public static int UNDEFINED = -1;
 	
-	public Resource(int localId, URL url, File file)
+	public Resource(int localId, URL url, File file, String name)
 	{
 		setlocalId(localId);
 		setUrl(url);
 		setFile(file);
+		setName(name);
 	}
 
 	public int getlocalId()
@@ -57,5 +60,15 @@ abstract public class Resource
 	public void setWebLocations(MediaInterface[] webLocations)
 	{
 		_webLocations = webLocations;
+	}
+
+	public String getName()
+	{
+		return _name;
+	}
+
+	public void setName(String name)
+	{
+		_name = name;
 	}
 }
