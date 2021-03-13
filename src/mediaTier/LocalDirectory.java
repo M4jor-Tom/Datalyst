@@ -25,8 +25,7 @@ public class LocalDirectory implements MediaInterface
 		_localPath = localPath;
 	}
 
-	@Override
-	public ArrayList<Resource> getResouces()
+	public ArrayList<Resource> getResources()
 	{
 		File[] files = new File(getLocalPath()).listFiles();
 		ArrayList<Resource> resourcesList = new ArrayList<>();
