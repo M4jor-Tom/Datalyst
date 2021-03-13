@@ -28,7 +28,7 @@ public abstract class WebScraper implements MediaInterface
 		setLoginUrl(loginUrl);
 		setTokenName(tokenName);
 		
-		//Begin process of scraping
+		//Getting connection cookies
 		login(userName, password);
 	}
 
