@@ -25,6 +25,8 @@ public class ImagePanel extends JPanel
 	protected void paintComponent(Graphics graphics)
 	{
 		super.paintComponent(graphics);
+		
+		//Choosing fitting mode depending on image and screen proportions
 		boolean fitToWidth =
 				(getWidth() / getHeight())
 				< (getBufferedImage().getWidth() / getBufferedImage().getHeight());
