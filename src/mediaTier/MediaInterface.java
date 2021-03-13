@@ -6,5 +6,5 @@ import entitiesPackage.Resource;
 
 public interface MediaInterface
 {	
-	public ArrayList<Resource> getResouces();
+	public ArrayList<Resource> getResources();
 }
