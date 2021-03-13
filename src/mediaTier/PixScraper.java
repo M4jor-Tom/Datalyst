@@ -16,8 +16,8 @@ public class PixScraper extends WebScraper implements MediaInterface
 		);
 	}
 	@Override
-	public ArrayList<Resource> getResouces()
+	public void actualizeResources()
 	{
-		return null;
+		
 	}
 }
