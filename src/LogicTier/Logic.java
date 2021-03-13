@@ -19,18 +19,29 @@ public class Logic implements LogicInterface
 	MediaInterface[] _webMediaInterfaces;
 	int _current;
 	ArrayList<Resource> _resources;
-	BufferedImage _bufferedImage;
+	ArrayList<BufferedImage> _bufferedImages;
 	
 	public Logic(MediaInterface localMediaInterface, MediaInterface[] webMediaInterfaces, DataInterface sqlManager)
 	{
+		//Setting up N-tier architecture
 		setLocalMediaInterface(localMediaInterface);
 		setWebMediaInterfaces(webMediaInterfaces);
 
+		//Cursor set to 0
 		setCurrent(0);
-		setResources(getLocalMediaInterface().getResouces());
-		updateBuffererdImage();
+
+		//Merging all resources from both local and distant directories
+		ArrayList<Resource> allResources = new ArrayList<>();
+		allResources = getLocalMediaInterface().getResources();
+		allResources.addAll(getWebMediaInterfaces()[1].getResources());
+		
+		//Good to have for later to do some database fetching to sync everything
+		setResources(allResources);
+		
+		//Good to have to preload images and to use app fast once opened
+		setBufferedImagesFromRessources(allResources);
 	}
-	
+
 	public MediaInterface getLocalMediaInterface()
 	{
 		return _localMediaInterface;
@@ -46,6 +57,12 @@ public class Logic implements LogicInterface
 		_webMediaInterfaces = new MediaInterface[webMediaInterfaces.length];
 		for(int i = 0; i < webMediaInterfaces.length; i++)
 			_webMediaInterfaces[i] = webMediaInterfaces[i];
+	}
+
+	
+	private MediaInterface[] getWebMediaInterfaces()
+	{
+		return _webMediaInterfaces;
 	}
 	
 	public int getCurrent()
@@ -64,7 +81,6 @@ public class Logic implements LogicInterface
 		if(getCurrent() < getResourcesCount() - 1)
 		{
 			setCurrent(getCurrent() + 1);
-			updateBuffererdImage();
 		}
 	}
 
@@ -74,13 +90,12 @@ public class Logic implements LogicInterface
 		if(getCurrent() > 0)
 		{
 			setCurrent(getCurrent() - 1);
-			updateBuffererdImage();
 		}
 	}
 	
 	public ArrayList<Resource> getResources()
 	{
-		return getLocalMediaInterface().getResouces();
+		return _resources;
 	}
 	
 	public void setResources(ArrayList<Resource> ressources)
@@ -102,44 +117,60 @@ public class Logic implements LogicInterface
 	@Override
 	public BufferedImage getBufferedImage()
 	{
-		return _bufferedImage;
+		return _bufferedImages.get(getCurrent());
+	}
+	
+	public ArrayList<BufferedImage> getBufferedImages()
+	{
+		return _bufferedImages;
+	}
+	
+	public void setBufferedImages(ArrayList<BufferedImage> bufferedImages)
+	{
+		_bufferedImages = new ArrayList<>();
+	}
+	
+	public void addBufferedImage(BufferedImage bufferedImage)
+	{
+		getBufferedImages().add(bufferedImage);
+	}
+	
+	public void setBufferedImagesFromRessources(ArrayList<Resource> resources)
+	{
+		setBufferedImages(null);
+		for(Resource resource: resources)
+		{
+			File file = null;
+			URL url = null;
+			
+			//Deciding how to get BufferedImage object
+			if((file = resource.getFile()) != null)
+			{
+				try
+				{
+					addBufferedImage(ImageIO.read(file));
+				}
+				catch (IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
+			else if((url = resource.getUrl()) != null)
+			{
+				try
+				{
+					addBufferedImage(ImageIO.read(url));
+				}
+				catch (IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 	
 	public ImageIcon getImageIcon()
 	{
 		return new ImageIcon(getBufferedImage());
-	}
-
-	public void updateBuffererdImage()
-	{
-		//Getting current Resource
-		Resource currentRessource = getLocalMediaInterface().getResouces().get(getCurrent());
-		
-		File file = null;
-		URL url = null;
-		
-		//Deciding how to get BufferedImage object
-		if((file = currentRessource.getFile()) != null)
-		{
-			try
-			{
-				_bufferedImage = ImageIO.read(file);
-			}
-			catch (IOException e)
-			{
-				e.printStackTrace();
-			}
-		}
-		else if((url = currentRessource.getUrl()) != null)
-		{
-			try
-			{
-				_bufferedImage = ImageIO.read(url);
-			}
-			catch (IOException e)
-			{
-				e.printStackTrace();
-			}
-		}
 	}
 }
