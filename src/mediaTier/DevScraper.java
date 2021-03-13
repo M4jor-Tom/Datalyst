@@ -37,6 +37,7 @@ public class DevScraper extends WebScraper implements MediaInterface
 				.userAgent(USER_AGENT)
 				.data("username", username)
 				.data("password", password)
+				.method(Connection.Method.GET)
 				.execute();
 			
 			//This is the document containing response html
