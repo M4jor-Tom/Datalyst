@@ -5,7 +5,6 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
