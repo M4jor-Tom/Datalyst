@@ -2,6 +2,7 @@ package mediaTier;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -76,13 +77,19 @@ public class DevScraper extends WebScraper implements MediaInterface
 	public void actualizeResources()
 	{
 		try
-		{
+		{	
+			System.out.println("Finding images...");
+			
 			//Get bookmarks list
 			Elements bookmarks = getDocument("https://www.deviantart.com/snoiot/favourites")
 				.getElementsByTag("a");
+			
+			//Getting number of images for loading info
+			int resourcesCount = bookmarks.size();
 
 			//Preparing return variable
 			ArrayList<Resource> resources = new ArrayList<>();
+			int found = 0;
 			for(Element bookmark: bookmarks)
 				if(
 					//Filter through bookmarks page to get good <a href>
@@ -103,6 +110,9 @@ public class DevScraper extends WebScraper implements MediaInterface
 							image.attr("alt")
 						)
 					);
+					
+					//Printing count of found images
+					System.out.print("\b\b\b\b\b\b\b\b\b\b\b" + ++found + "/" + resourcesCount);
 				}
 			setResources(resources);
 		}
