@@ -24,8 +24,8 @@ public class VideoPanel extends JPanel
 	        Component video = mediaPlayer.getVisualComponent();
 	        Component controls = mediaPlayer.getControlPanelComponent();
 	        
-	        add(video,BorderLayout.CENTER);
-	        add(controls,BorderLayout.SOUTH);
+	        add(video, BorderLayout.CENTER);
+	        add(controls, BorderLayout.SOUTH);
 		}
 		catch(NoPlayerException | CannotRealizeException | IOException e)
 		{
