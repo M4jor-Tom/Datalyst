@@ -40,6 +40,12 @@ public class ImageNavigator extends MediaNavigator
 			}
 		);
 	}
+
+	@Override
+	protected void instantiateMediaPanel()
+	{
+		setMediaPanel(new ImagePanel(getLogicInterface().getBufferedImage()));
+	}
 	
 	private ImagePanel getImagePanel()
 	{

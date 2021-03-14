@@ -13,6 +13,7 @@ abstract public class MediaNavigator extends View
 {
 	private MediaPanel _mediaPanel;
 	
+	//Actions for buttons
 	protected abstract void addActionListeners(JButton leftButton, JButton rightButton);
 	
 	public MediaNavigator(LogicInterface logicInterface)
@@ -26,8 +27,8 @@ abstract public class MediaNavigator extends View
 		//JFrame instantiation
 		JFrame jFrame = new JFrame();
 		
-		//Image instantiation
-		setMediaPanel(new ImagePanel(getLogicInterface().getBufferedImage()));
+		//Media instantiation
+		instantiateMediaPanel();
 		
 		//JButtons instantiation
 		JButton
@@ -58,6 +59,8 @@ abstract public class MediaNavigator extends View
 		//JFrame ready
 		jFrame.setVisible(true);
 	}
+
+	protected abstract void instantiateMediaPanel();
 
 	public MediaPanel getMediaPanel()
 	{
