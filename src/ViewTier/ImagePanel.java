@@ -3,9 +3,7 @@ package viewTier;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import javax.swing.JPanel;
-
-public class ImagePanel extends JPanel
+public class ImagePanel extends MediaPanel
 {
 	private static final long serialVersionUID = 1L;
 	private BufferedImage _bufferedImage;
