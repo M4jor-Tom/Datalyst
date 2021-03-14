@@ -5,19 +5,15 @@ import java.awt.Component;
 import java.io.File;
 import java.io.IOException;
 
-import javax.media.CannotRealizeException;
-import javax.media.Manager;
-import javax.media.NoPlayerException;
-import javax.media.Player;
-import javax.swing.JPanel;
+import javax.media.*;
 
-public class VideoPanel extends JPanel
+public class VideoPanel extends MediaPanel
 {
+	private static final long serialVersionUID = 1L;
+
 	public VideoPanel(File file)
     {
-        setLayout(new BorderLayout());
-
-		try
+        try
 		{
 			Player mediaPlayer = Manager.createRealizedPlayer(file.toURI().toURL());
 
