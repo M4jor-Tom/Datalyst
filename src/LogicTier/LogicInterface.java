@@ -1,8 +1,8 @@
 package logicTier;
 
-import java.awt.image.BufferedImage;
+import resourcePackage.*;
 
-import entitiesPackage.Resource;
+import java.awt.image.BufferedImage;
 
 public interface LogicInterface
 {

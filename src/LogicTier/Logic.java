@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
+import resourcePackage.*;
 import dataTier.DataInterface;
-import entitiesPackage.Resource;
+import resourcePackage.Resource;
 import mediaTier.MediaInterface;
 
 public class Logic implements LogicInterface
