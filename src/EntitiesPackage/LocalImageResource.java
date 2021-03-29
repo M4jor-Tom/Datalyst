@@ -1,5 +1,7 @@
 package entitiesPackage;
 
+import resourcePackage.*;
+
 import java.io.File;
 
 public class LocalImageResource extends ImageResource

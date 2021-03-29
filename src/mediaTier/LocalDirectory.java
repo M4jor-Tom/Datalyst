@@ -6,9 +6,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import resourcePackage.*;
+
 import entitiesPackage.LocalImageResource;
 import entitiesPackage.LocalVideoResource;
-import entitiesPackage.Resource;
 
 public class LocalDirectory implements MediaInterface
 {

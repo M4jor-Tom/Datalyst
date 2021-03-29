@@ -1,8 +1,8 @@
 package mediaTier;
 
-import java.util.ArrayList;
+import resourcePackage.*;
 
-import entitiesPackage.Resource;
+import java.util.ArrayList;
 
 public interface MediaInterface
 {	
