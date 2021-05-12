@@ -15,6 +15,7 @@ public abstract class WebScraper implements MediaInterface
 	private ArrayList<Resource> _resources;
 	private String _loginUrl;
 	private String _tokenName;
+	private String _scrapedStringUrl;
 	private Map<String, String> _cookies;
 	final String USER_AGENT = 
 			//"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
@@ -101,6 +102,16 @@ public abstract class WebScraper implements MediaInterface
 	public void setTokenName(String tokenName)
 	{
 		_tokenName = tokenName;
+	}
+
+	public String getScrapedStringUrl()
+	{
+		return _scrapedStringUrl;
+	}
+
+	public void setScrapedStringUrl(String scrapedStringUrl)
+	{
+		_scrapedStringUrl = scrapedStringUrl;
 	}
 
 	public Map<String, String> getCookies()
