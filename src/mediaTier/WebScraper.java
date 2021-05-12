@@ -36,10 +36,7 @@ public abstract class WebScraper implements MediaInterface
 
 	public abstract void actualizeResources();
 	
-	public void login(String username, String password)
-	{
-		
-	}
+	abstract public void login(String username, String password);
 
 	public Document getDocument(String stringUrl)
 	{
