@@ -5,6 +5,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import resourcePackage.*;
+
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,7 +14,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import entitiesPackage.DevResource;
-import entitiesPackage.Resource;
 
 public class PixScraper extends WebScraper implements MediaInterface
 {

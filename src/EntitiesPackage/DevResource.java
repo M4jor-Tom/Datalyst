@@ -1,5 +1,7 @@
 package entitiesPackage;
 
+import resourcePackage.*;
+
 import java.net.URL;
 
 public class DevResource extends ImageResource

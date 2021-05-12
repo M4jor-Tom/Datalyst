@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import resourcePackage.*;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
-import entitiesPackage.Resource;
 
 public abstract class WebScraper implements MediaInterface
 {
