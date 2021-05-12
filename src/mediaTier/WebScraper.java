@@ -20,6 +20,20 @@ public abstract class WebScraper implements MediaInterface
 			//"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
 			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36";
 	
+	public WebScraper(Map<String, String> cookies)
+	{
+		//Initialization of Resources and Cookies to null
+		setResources(null);
+		setCookies(null);
+		
+		//Setting data
+		setLoginUrl(null);
+		setTokenName(null);
+		
+		//Getting connection cookies
+		setCookies(cookies);
+	}
+	
 	public WebScraper(String loginUrl, String tokenName, String userName, String password)
 	{
 		//Initialization of Resources and Cookies to null
