@@ -13,8 +13,8 @@ import org.jsoup.nodes.Document;
 public abstract class WebScraper implements MediaInterface
 {
 	private ArrayList<Resource> _resources;
-	public String _loginUrl;
-	public String _tokenName;
+	private String _loginUrl;
+	private String _tokenName;
 	private Map<String, String> _cookies;
 	final String USER_AGENT = 
 			//"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
