@@ -1,4 +1,4 @@
-package viewTier;
+package presentationTier;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

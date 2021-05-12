@@ -1,11 +1,11 @@
-package viewTier;
+package presentationTier;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
+//import java.awt.BorderLayout;
+//import java.awt.Component;
 import java.io.File;
-import java.io.IOException;
+//import java.io.IOException;
 
-import javax.media.*;
+//import javax.media.*;
 
 public class VideoPanel extends MediaPanel
 {
@@ -13,9 +13,9 @@ public class VideoPanel extends MediaPanel
 
 	public VideoPanel(File file)
     {
-        try
+        /*try
 		{
-			Player mediaPlayer = Manager.createRealizedPlayer(file.toURI().toURL());
+			//Player mediaPlayer = Manager.createRealizedPlayer(file.toURI().toURL());
 
 	        Component video = mediaPlayer.getVisualComponent();
 	        Component controls = mediaPlayer.getControlPanelComponent();
@@ -26,6 +26,6 @@ public class VideoPanel extends MediaPanel
 		catch(NoPlayerException | CannotRealizeException | IOException e)
 		{
 			e.printStackTrace();
-		}
+		}*/
     }
 }

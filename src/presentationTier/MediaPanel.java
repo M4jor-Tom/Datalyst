@@ -1,4 +1,4 @@
-package viewTier;
+package presentationTier;
 
 import javax.swing.JPanel;
 

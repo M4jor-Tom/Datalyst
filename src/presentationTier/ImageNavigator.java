@@ -1,4 +1,4 @@
-package viewTier;
+package presentationTier;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

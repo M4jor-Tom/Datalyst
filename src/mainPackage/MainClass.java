@@ -3,7 +3,7 @@ package mainPackage;
 import dataTier.*;
 import logicTier.*;
 import mediaTier.*;
-import viewTier.*;
+import presentationTier.*;
 
 public class MainClass
 {

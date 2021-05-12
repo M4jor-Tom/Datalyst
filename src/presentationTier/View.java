@@ -1,4 +1,4 @@
-package viewTier;
+package presentationTier;
 
 import logicTier.LogicInterface;
 
