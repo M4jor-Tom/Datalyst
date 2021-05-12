@@ -21,7 +21,7 @@ public abstract class WebScraper implements MediaInterface
 			//"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
 			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36";
 	
-	public WebScraper(Map<String, String> cookies)
+	public WebScraper(Map<String, String> cookies, String scrapedStringUrl)
 	{
 		//Initialization of Resources and Cookies to null
 		setResources(null);
@@ -30,6 +30,7 @@ public abstract class WebScraper implements MediaInterface
 		//Setting data
 		setLoginUrl(null);
 		setTokenName(null);
+		setScrapedStringUrl(scrapedStringUrl);
 		
 		//Getting connection cookies
 		setCookies(cookies);
@@ -44,6 +45,7 @@ public abstract class WebScraper implements MediaInterface
 		//Setting data
 		setLoginUrl(loginUrl);
 		setTokenName(tokenName);
+		setScrapedStringUrl(null);
 		
 		//Getting connection cookies
 		login(userName, password);
