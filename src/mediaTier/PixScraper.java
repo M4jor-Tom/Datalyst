@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import resourcePackage.*;
 
@@ -17,6 +18,12 @@ import entitiesPackage.DevResource;
 
 public class PixScraper extends WebScraper implements MediaInterface
 {
+	
+	public PixScraper(Map<String, String> cookies, String scrapedStringUrl)
+	{
+		super(cookies, scrapedStringUrl);
+	}
+	
 	public PixScraper(String userName, String password)
 	{
 		super(
