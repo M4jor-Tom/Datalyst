@@ -16,7 +16,7 @@ public class MainClass
 		DataInterface mysqlManager = null;//new MySQLManager();
 		
 		//MEDIA-TIER
-		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive - tf\\DCIM\\Images\\");
+		MediaInterface testImagesBase = new LocalDirectory("D:\\gDrive\\DCIM\\Images\\");
 		//MediaInterface testVideoBase = new LocalDirectory("D:\\gDrive\\DCIM\\Videos\\");
 		MediaInterface[] webScrapers = new MediaInterface[2];
 		Map<String, String> cookies = new HashMap<String, String>();
