@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Resourcyst/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="K:/Repos/eclipse_workspace/jars/jsoup-1.13.1.jar"/>
+	<classpathentry kind="lib" path="D:/Repos/eclipse_workspace/jars/jsoup-1.13.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
