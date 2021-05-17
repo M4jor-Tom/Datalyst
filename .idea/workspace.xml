@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae3835f5-00b8-4b4c-852b-23ca2816ccd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.8/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Datalyst.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datalyst.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/6.8/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resourcyst" beforeDir="false" afterPath="$PROJECT_DIR$/Resourcyst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resourcyst/src/resourcePackage/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Resourcyst/src/resourcePackage/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resourcyst/src/resourcePackage/ResourcystVersionable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resourcyst/src/resourcystTestPackage/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Resourcyst/src/resourcystTestPackage/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntitiesPackage/DevResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntitiesPackage/LocalImageResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntitiesPackage/LocalVideoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntitiesPackage/PixResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntitiesPackage/PreReferenced.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LogicTier/Logic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LogicTier/LogicInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataTier/DataInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataTier/MySQLManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/MainClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediaTier/DevScraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediaTier/LocalDirectory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediaTier/MediaInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediaTier/PixScraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediaTier/WebScraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/ImageNavigator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/ImagePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/MediaNavigator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/MediaPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/VideoNavigator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/VideoPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentationTier/View.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sfi4uR8FdsmuwyL9wSp0UFprTY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae3835f5-00b8-4b4c-852b-23ca2816ccd6" name="Default Changelist" comment="" />
+      <created>1621269856641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621269856641</updated>
+    </task>
+    <servers />
+  </component>
+</project>
