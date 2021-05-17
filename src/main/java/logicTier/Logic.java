@@ -32,7 +32,7 @@ public class Logic implements LogicInterface
 		//Merging all resources from both local and distant directories
 		List<resourcePackage.Resource> allResources = new ArrayList<>();
 		allResources = getLocalMediaInterface().getResources();
-		//allResources.addAll(getWebMediaInterfaces()[0].getResources());
+		allResources.addAll(getWebMediaInterfaces()[0].getResources());
 		//allResources.addAll(getWebMediaInterfaces()[1].getResources());
 		
 		//Good to have for later to do some database fetching to sync everything

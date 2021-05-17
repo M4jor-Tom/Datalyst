@@ -1,5 +1,6 @@
 package mainPackage;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dataTier.DataInterface;
 import logicTier.Logic;
@@ -11,6 +12,8 @@ import mediaTier.PixScraper;
 import presentationTier.ImageNavigator;
 import presentationTier.View;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,9 +32,10 @@ public class MainClass
 		ObjectMapper objectMapper = new ObjectMapper();
 
 		Map<String, String> cookies = new HashMap<>();
-		/*try
+		try
 		{
 			cookies = objectMapper.readValue(new File("C:\\Users\\tom-v\\Desktop\\cookies.json"), HashMap.class);
+			System.out.println("Cookie read success !");
 		}
 		catch(JsonProcessingException e)
 		{
@@ -40,7 +44,7 @@ public class MainClass
 		catch (IOException e)
 		{
 			System.out.println("Json file \"cookies.json\" not found");
-		}*/
+		}
 		webScrapers[0] = new PixScraper(cookies, "https://www.pixiv.net/bookmark.php");
 		//webScrapers[0] = new PixScraper(cookies, "https://www.pixiv.net/en/users/[upk]/bookmarks/artworks");
 		webScrapers[1] = new DevScraper("[uid]", "[pwd]");
