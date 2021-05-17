@@ -6,3 +6,7 @@ bin/
 .gradle/
 
 .idea/
+
+*.class
+
+build/tmp/compileJava/

@@ -16,6 +16,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
     implementation 'org.jsoup:jsoup:1.13.1'
+
+    implementation 'com.github.FasterXML:jackson-databind:jackson-databind-2.12.3'
 }
 
 test {
