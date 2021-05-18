@@ -1,6 +1,7 @@
 package mainPackage;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dataTier.DataInterface;
 import logicTier.Logic;
@@ -34,7 +35,10 @@ public class MainClass
 		Map<String, String> cookies = new HashMap<>();
 		try
 		{
-			cookies = objectMapper.readValue(new File("C:\\Users\\tom-v\\Desktop\\cookies.json"), HashMap.class);
+			cookies = objectMapper.readValue(
+					new File("C:\\Users\\tom-v\\Desktop\\cookies.json"),
+					new TypeReference<Map<String, String>>() {}
+			);
 			System.out.println("Cookie read success !");
 		}
 		catch(JsonProcessingException e)
